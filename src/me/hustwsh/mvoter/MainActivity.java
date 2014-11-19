@@ -1,5 +1,19 @@
 package me.hustwsh.mvoter;
-
+/*
+ *Author:hust_wsh
+ *Version:0.1.1 
+ *Date:2014-11-19
+ *Note:
+ *实现刷人气；
+ *实现获取排名信息;
+ *实现刷票;
+ *Todo:
+ *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
+ *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
+ *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
+ *投票历史曲线功能
+ *定时刷票
+ */
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
