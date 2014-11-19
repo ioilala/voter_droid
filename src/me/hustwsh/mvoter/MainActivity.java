@@ -22,8 +22,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.integer;
 import android.R.string;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -31,6 +33,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,8 +65,18 @@ public class MainActivity extends Activity {
 	public static final String URL_AIM_PAGE_REFER = "http://gqt-xl.org/Vote_List5.asp?ClassId=44&Topid=0";
 	public static final String URL_VOTE_REFER= "http://gqt-xl.org/index.asp";
 	public static final String USER_AGENT=" Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36";
+	//sharedpreference 
+	public static final String PREF_VOTE_COUNT="votecount";
+	public static final String PREF_HOT_COUNT="hotcount";
+	public static final String PREF_RANK="rank";
+	public static final String PREF_RANK_STR="rankstr";
+	
 	public static final int TIME_OUT=3000;
+	
 	HttpClient httpClient=null;
+	SharedPreferences preferences=null;
+	SharedPreferences.Editor editorPref=null;
+	
 	Button btnVote=null;
     Button btnAddHot=null;
     Button btnGetVoteShow=null;
@@ -71,11 +84,16 @@ public class MainActivity extends Activity {
     TextView tvHotCount=null;
     TextView tvRank=null;
     EditText etMsg=null;
+    
     static Handler uiHandler=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        preferences=getSharedPreferences("mvoter", MODE_PRIVATE);
+        editorPref=preferences.edit();
+        
         btnVote=(Button)findViewById(R.id.btnVote);
         btnAddHot=(Button)findViewById(R.id.btnAddHot);
         btnGetVoteShow=(Button)findViewById(R.id.btnGetVoteShow);
@@ -83,6 +101,8 @@ public class MainActivity extends Activity {
         tvHotCount=(TextView)findViewById(R.id.tvHotCount);
         tvRank=(TextView)findViewById(R.id.tvRank);
         etMsg=(EditText)findViewById(R.id.etMsg);
+        
+        RestoreData();
         
         HttpParams httpParams=new BasicHttpParams();
 		HttpConnectionParams.setConnectionTimeout(httpParams, TIME_OUT);
@@ -309,23 +329,26 @@ public class MainActivity extends Activity {
 			String keystr=elements.first().select("font").first().text();
 			keystr=keystr.replace("人气：",":");
 			String[] strings=keystr.split(":");
-			final String voteCount=strings[0].trim();
+			final String voteCount=strings[0].substring(0, strings[0].length()-1);
+			char[] chars=strings[0].toCharArray();
 			final String hotCount=strings[1].trim();
 			Element elTbody=doc.select(".MainRight").last().parent().parent();//获取到了排名榜的tbody
 			Element elTable=elTbody.select("table>tbody").last();//得到了包含排名的具体table
 			Elements elLinks=elTable.select("a");
+			int rank=0;
 			for (int i = 0; i < elLinks.size(); i++)
 			{
 				if(elLinks.get(i).text().contains("北大方正"))
 				{
-					final int rank=i+1;
+					rank=i+1;
+					final String rankString=String.valueOf(rank);
 					tvRank.post(new Runnable()
 					{
 						@Override
 						public void run()
 						{
 							// TODO Auto-generated method stub
-							tvRank.setText(Integer.toString(rank));
+							tvRank.setText(rankString);
 						}
 					});
 					break;
@@ -333,6 +356,9 @@ public class MainActivity extends Activity {
 			}
 			final String formstr=elTable.text();
 			OutMsg(formstr);
+			
+			StoreData(Integer.parseInt(voteCount.trim()),Integer.parseInt(hotCount),rank,formstr);
+			
 			tvVoteCount.post(new Runnable()
 			{
 				
@@ -440,7 +466,7 @@ public class MainActivity extends Activity {
 		}
 	}
     //打印消息
-    private  void  OutMsg(String str)
+    private void OutMsg(String str)
     {
     	Bundle data=new Bundle();
     	data.putString("msg", str);
@@ -449,4 +475,35 @@ public class MainActivity extends Activity {
     	msg.what=0x01;    	
     	uiHandler.sendMessage(msg);
     }
+    //把投票信息存到本地
+    private void StoreData(int votecount,int hotcount,int rank,String rankstr)
+	{
+    	editorPref.putInt(PREF_VOTE_COUNT, votecount);
+    	editorPref.putInt(PREF_HOT_COUNT, hotcount);
+    	editorPref.putInt(PREF_RANK, rank);
+    	editorPref.putString(PREF_RANK_STR, rankstr);
+    	editorPref.commit();
+	}    
+    //恢复本地信息
+    private void RestoreData()
+	{
+		final int votecount=preferences.getInt(PREF_VOTE_COUNT,0);
+		final int hotcount=preferences.getInt(PREF_HOT_COUNT, 0);
+		final int rank=preferences.getInt(PREF_RANK, 0);
+		final String rankstr=preferences.getString(PREF_RANK_STR, "");
+		RelativeLayout rl=(RelativeLayout)findViewById(R.id.reltiveLayoutMain);
+		rl.post(new Runnable()
+		{
+			
+			@Override
+			public void run()
+			{
+				// TODO Auto-generated method stub
+				tvVoteCount.setText(String.valueOf(votecount));
+				tvHotCount.setText(String.valueOf(hotcount));
+				tvRank.setText(String.valueOf(rank));
+				etMsg.append(rankstr);
+			}
+		});
+	}
 }
