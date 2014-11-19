@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.1 
+ *Version:0.1.2 
  *Date:2014-11-19
  *Note:
  *实现刷人气；
