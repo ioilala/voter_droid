@@ -169,7 +169,6 @@ public class MainActivity extends Activity {
 			if(httpResponse.getStatusLine().getStatusCode()==200)
 			{
 				String msg=EntityUtils.toString(httpResponse.getEntity());
-				//OutMsg(msg);
 				if(msg.contains("投票成功"))
 				{
 					OutMsg("投票成功!");
