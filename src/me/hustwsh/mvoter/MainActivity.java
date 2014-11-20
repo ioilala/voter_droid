@@ -1,14 +1,15 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.2 
+ *Version:0.1.2.1
  *Date:2014-11-19
  *Note:
  *实现刷人气；
  *实现获取排名信息;
  *实现刷票;
+ *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来(整数错误)
  *Todo:
- *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
+ *
  *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
  *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
  *投票历史曲线功能
@@ -318,67 +319,75 @@ public class MainActivity extends Activity {
     //获取投票信息
     private void GetVoteShow()
 	{
-		String htmlStr=GetVoteShowHtml();
-//		OutMsg(htmlStr);
-		if(htmlStr!=null)
+    	try
 		{
-			Document doc = Jsoup.parse(htmlStr);
-//			Elements el=doc.getElementsByClass("MainRight");
-//			OutMsg(el.outerHtml());
-			Elements elements=doc.select(":containsOwn(北大方正)");
-			String keystr=elements.first().select("font").first().text();
-			keystr=keystr.replace("人气：",":");
-			String[] strings=keystr.split(":");
-			final String voteCount=strings[0].substring(0, strings[0].length()-1);
-			char[] chars=strings[0].toCharArray();
-			final String hotCount=strings[1].trim();
-			Element elTbody=doc.select(".MainRight").last().parent().parent();//获取到了排名榜的tbody
-			Element elTable=elTbody.select("table>tbody").last();//得到了包含排名的具体table
-			Elements elLinks=elTable.select("a");
-			int rank=0;
-			for (int i = 0; i < elLinks.size(); i++)
-			{
-				if(elLinks.get(i).text().contains("北大方正"))
-				{
-					rank=i+1;
-					final String rankString=String.valueOf(rank);
-					tvRank.post(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							// TODO Auto-generated method stub
-							tvRank.setText(rankString);
-						}
-					});
-					break;
-				}
-			}
-			final String formstr=elTable.text();
-			OutMsg(formstr);
-			
-			StoreData(Integer.parseInt(voteCount.trim()),Integer.parseInt(hotCount),rank,formstr);
-			
-			tvVoteCount.post(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					// TODO Auto-generated method stub
-					tvVoteCount.setText(voteCount);
-				}
-			});
-			tvHotCount.post(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					// TODO Auto-generated method stub
-					tvHotCount.setText(hotCount);
-				}
-			});
+    		String htmlStr=GetVoteShowHtml();
+//    		OutMsg(htmlStr);
+    		if(htmlStr!=null)
+    		{
+    			Document doc = Jsoup.parse(htmlStr);
+//    			Elements el=doc.getElementsByClass("MainRight");
+//    			OutMsg(el.outerHtml());
+    			Elements elements=doc.select(":containsOwn(北大方正)");
+    			String keystr=elements.first().select("font").first().text();
+    			keystr=keystr.replace("人气：",":");
+    			String[] strings=keystr.split(":");
+    			final String voteCount=strings[0].substring(0, strings[0].length()-1);
+    			char[] chars=strings[0].toCharArray();
+    			final String hotCount=strings[1].trim();
+    			Element elTbody=doc.select(".MainRight").last().parent().parent();//获取到了排名榜的tbody
+    			Element elTable=elTbody.select("table>tbody").last();//得到了包含排名的具体table
+    			Elements elLinks=elTable.select("a");
+    			int rank=0;
+    			for (int i = 0; i < elLinks.size(); i++)
+    			{
+    				if(elLinks.get(i).text().contains("北大方正"))
+    				{
+    					rank=i+1;
+    					final String rankString=String.valueOf(rank);
+    					tvRank.post(new Runnable()
+    					{
+    						@Override
+    						public void run()
+    						{
+    							// TODO Auto-generated method stub
+    							tvRank.setText(rankString);
+    						}
+    					});
+    					break;
+    				}
+    			}
+    			final String formstr=elTable.text();
+    			OutMsg(formstr);
+    			
+    			StoreData(Integer.parseInt(voteCount.trim()),Integer.parseInt(hotCount),rank,formstr);
+    			
+    			tvVoteCount.post(new Runnable()
+    			{
+    				
+    				@Override
+    				public void run()
+    				{
+    					// TODO Auto-generated method stub
+    					tvVoteCount.setText(voteCount);
+    				}
+    			});
+    			tvHotCount.post(new Runnable()
+    			{
+    				
+    				@Override
+    				public void run()
+    				{
+    					// TODO Auto-generated method stub
+    					tvHotCount.setText(hotCount);
+    				}
+    			});
+    		}
+		}
+		catch (Exception e)
+		{
+			// TODO: handle exception
+			OutMsg(e.getMessage()+e.getCause());
 		}
 	}
     //获取投票页面htmlstr
