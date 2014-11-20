@@ -74,25 +74,27 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="top|left"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:padding="30px" />
 
     <Button
         android:id="@+id/btnGetVoteShow"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="最新票数" />
+        android:text="最新票数"
+        android:layout_alignTop="@+id/btnAddHot"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnVote"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btnGetVoteShow"
-        android:text="投票" />
+        android:text="投票"
+        android:layout_alignTop="@+id/btnGetVoteShow"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:id="@+id/btnAddHot"
