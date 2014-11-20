@@ -1,15 +1,14 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.2.1
- *Date:2014-11-19
+ *Version:0.1.2.2
+ *Date:2014-11-20
  *Note:
  *实现刷人气；
  *实现获取排名信息;
  *实现刷票;
- *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来(整数错误)
+ *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
  *Todo:
- *
  *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
  *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
  *投票历史曲线功能
@@ -332,9 +331,9 @@ public class MainActivity extends Activity {
     			String keystr=elements.first().select("font").first().text();
     			keystr=keystr.replace("人气：",":");
     			String[] strings=keystr.split(":");
-    			final String voteCount=strings[0].substring(0, strings[0].length()-1);
-    			char[] chars=strings[0].toCharArray();
-    			final String hotCount=strings[1].trim();
+    			final String voteCountStr=strings[0].substring(0, strings[0].length()-1);
+//    			char[] chars=strings[0].toCharArray();
+    			final String hotCountStr=strings[1].trim();
     			Element elTbody=doc.select(".MainRight").last().parent().parent();//获取到了排名榜的tbody
     			Element elTable=elTbody.select("table>tbody").last();//得到了包含排名的具体table
     			Elements elLinks=elTable.select("a");
@@ -359,8 +358,9 @@ public class MainActivity extends Activity {
     			}
     			final String formstr=elTable.text();
     			OutMsg(formstr);
-    			
-    			StoreData(Integer.parseInt(voteCount.trim()),Integer.parseInt(hotCount),rank,formstr);
+    			int voteCount=GetIntFromStr(voteCountStr);
+    			int hotCount=GetIntFromStr(hotCountStr);
+    			StoreData(voteCount,hotCount,rank,formstr);
     			
     			tvVoteCount.post(new Runnable()
     			{
@@ -369,7 +369,7 @@ public class MainActivity extends Activity {
     				public void run()
     				{
     					// TODO Auto-generated method stub
-    					tvVoteCount.setText(voteCount);
+    					tvVoteCount.setText(voteCountStr);
     				}
     			});
     			tvHotCount.post(new Runnable()
@@ -379,7 +379,7 @@ public class MainActivity extends Activity {
     				public void run()
     				{
     					// TODO Auto-generated method stub
-    					tvHotCount.setText(hotCount);
+    					tvHotCount.setText(hotCountStr);
     				}
     			});
     		}
@@ -515,4 +515,27 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
+    //获取正确的整数
+    private int GetIntFromStr(String str)
+    {
+    	try
+		{
+    		char[] chars=str.toCharArray();
+        	int i=0;
+        	for(i=0;i<chars.length;i++)
+    		{
+        		if(!Character.isDigit(chars[i]))
+        		{
+        			break;
+        		}
+    		}
+        	str=str.substring(0,i);
+        	return Integer.valueOf(str);
+		}
+		catch (Exception e)
+		{
+			// TODO: handle exception
+			return -1;
+		}	
+    }
 }
