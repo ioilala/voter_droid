@@ -24,15 +24,78 @@
       </layout>
     </layouts>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: me.hustwsh.mvoter" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e06ddc2-6ba2-438c-adf5-c524e7e53d99" name="Default" comment="move to andrid studio,I like it">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/hustwsh/mvoter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/hustwsh/mvoter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+    <list default="true" id="1e06ddc2-6ba2-438c-adf5-c524e7e53d99" name="Default" comment="v0.1.3.1 add border.xml">
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\Mvoter.apk" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\android\support\v7\appcompat\R.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity$7.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\classes\me\hustwsh\mvoter\R.class" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\dexedLibs\android-support-v4-3a559c4e2a0d6459bbed0f237babb101.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\dexedLibs\android-support-v7-appcompat-dea41ec32840d4e544c0634e0324dba9.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\dexedLibs\appcompat_v7-eef95e2a20f11c8c3f3440d9ed8a7e31.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\dexedLibs\jsoup-1.8.1-4c97ddd296ed7e1cd8cef7ad91a9c40d.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\res\crunch\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\res\crunch\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\res\crunch\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\res\crunch\drawable-xxhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\bin\resources.ap_" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\gen\android\support\v7\appcompat\R.java" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\gen\me\hustwsh\mvoter\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\gen\me\hustwsh\mvoter\R.java" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\libs\android-support-v4.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\libs\jsoup-1.8.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\drawable-xxhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\layout\activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\values-v11\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\values-v14\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\values\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\res\values\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\src\me\hustwsh\mvoter\MainActivity.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mvoter.iws" />
@@ -56,11 +119,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.122727275" vertical-offset="0" max-vertical-offset="1566">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
@@ -79,14 +142,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.48" vertical-offset="0" max-vertical-offset="558">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.464286" vertical-offset="1047" max-vertical-offset="2016">
-              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.37462234" vertical-offset="1192" max-vertical-offset="2016">
+              <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -553,7 +636,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4249453273465" />
+        <entry key="$PROJECT_DIR$" value="4249514160004" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -831,6 +914,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -1030,66 +1116,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mvoter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvoter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mvoter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvoter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvoter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="AndroidView">
@@ -1132,21 +1158,21 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="355BBI7MAY47" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="5.1Device" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="176" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="58" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="191" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="191" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="968" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="555" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="286" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="91" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="290" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="95" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="290" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="95" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="660" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="466" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -1307,7 +1333,11 @@
       <created>1416488329673</created>
       <updated>1416488329673</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.1.3.1 add border.xml">
+      <created>1416493508250</created>
+      <updated>1416493508250</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1341,14 +1371,14 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" x="1041" y="201" width="513" height="482" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32969153" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" x="1041" y="201" width="513" height="482" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27816412" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1651671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1382,7 +1412,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="move to andrid studio,I like it" />
-    <option name="LAST_COMMIT_MESSAGE" value="move to andrid studio,I like it" />
+    <MESSAGE value="v0.1.3.1 add border.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1.3.1 add border.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1486,27 +1517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen/me/hustwsh/mvoter/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="25216" max-vertical-offset="111852">
-          <caret line="1414" column="13" selection-start-line="1414" selection-start-column="13" selection-end-line="1414" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#347390#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.464286" vertical-offset="1047" max-vertical-offset="2016">
-          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
@@ -1517,8 +1527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.122727275" vertical-offset="0" max-vertical-offset="1566">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
@@ -1533,6 +1543,33 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.48" vertical-offset="0" max-vertical-offset="558">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37462234" vertical-offset="1192" max-vertical-offset="2016">
+          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
