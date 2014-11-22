@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.1
+ *Version:0.1.3.2
  *Date:2014-11-20
  *Note:
  *实现刷人气；
@@ -82,6 +82,7 @@ public class MainActivity extends Activity {
     
     static Handler uiHandler=null;
     @Override
+    //初始化
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -359,8 +360,8 @@ public class MainActivity extends Activity {
 //    			final String formstr=elTable.text();
     			final String formstr=srcStr;
     			OutMsg(formstr);
-    			int voteCount=GetIntFromStr(voteCountStr);
-    			int hotCount=GetIntFromStr(hotCountStr);
+    			final int voteCount=GetIntFromStr(voteCountStr);
+    			final int hotCount=GetIntFromStr(hotCountStr);
     			StoreData(voteCount,hotCount,rank,formstr);
     			
     			tvVoteCount.post(new Runnable()
@@ -370,7 +371,7 @@ public class MainActivity extends Activity {
     				public void run()
     				{
     					// TODO Auto-generated method stub
-    					tvVoteCount.setText(voteCountStr);
+    					tvVoteCount.setText(String.valueOf(voteCount));
     				}
     			});
     			tvHotCount.post(new Runnable()
@@ -380,7 +381,7 @@ public class MainActivity extends Activity {
     				public void run()
     				{
     					// TODO Auto-generated method stub
-    					tvHotCount.setText(hotCountStr);
+    					tvHotCount.setText(String.valueOf(hotCount));
     				}
     			});
     		}

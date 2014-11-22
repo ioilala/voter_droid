@@ -93,15 +93,15 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="投票"
-        android:layout_alignTop="@+id/btnGetVoteShow"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/etMsg" />
 
     <Button
         android:id="@+id/btnAddHot"
         android:layout_width="100dp"
         android:layout_height="40dp"
+        android:text="刷人气"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/etMsg"
-        android:text="刷人气" />
+        android:layout_alignRight="@+id/etMsg" />
 
 </RelativeLayout>
