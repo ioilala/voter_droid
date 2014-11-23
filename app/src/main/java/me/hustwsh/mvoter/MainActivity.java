@@ -1,15 +1,16 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.2
+ *Version:0.1.3.3
  *Date:2014-11-20
  *Note:
  *实现刷人气；
  *实现获取排名信息;
  *实现刷票;
  *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
- *Todo:
  *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
+ * 实现排行榜功能(前五名，保存本地数据)
+ *Todo:
  *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
  *投票历史曲线功能
  *定时刷票
@@ -20,12 +21,17 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -113,9 +119,12 @@ public class MainActivity extends Activity {
         	{
         		switch(msg.what)
         		{
-        			case 0x01:
-        				etMsg.append("\r\n"+msg.getData().getString("msg"));			
+        			case 1:
+        				etMsg.append("\n"+msg.getData().getString("msg"));
         				break;
+                    case 2:
+                        Toast.makeText(MainActivity.this,msg.getData().getString("msg"),Toast.LENGTH_SHORT).show();
+                        break;
         		}
         	}
         };
@@ -203,16 +212,16 @@ public class MainActivity extends Activity {
 				String msg=EntityUtils.toString(httpResponse.getEntity());
 				if(msg.contains("投票成功"))
 				{
-					OutMsg("投票成功!");
+					OutMsg("投票成功!",2);
 				}
 				else if(msg.contains("小时"))
 				{
-					OutMsg("24小时内只允许投一票!");
+					OutMsg("24小时内只允许投一票!",2);
 				}
 			}
 			else {
 //				Toast.makeText(MainActivity.this, "刷票失败", Toast.LENGTH_SHORT).show();
-				OutMsg("刷票失败!");
+				OutMsg("刷票失败!",2);
 			}
 			
 		}
@@ -220,7 +229,7 @@ public class MainActivity extends Activity {
 		{
 			// TODO: handle exception
 			e.printStackTrace();
-			OutMsg("刷票失败!"+e.getCause());
+			OutMsg("刷票失败!"+e.getCause(),2);
 //			Toast.makeText(MainActivity.this, "刷票失败!", Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -242,11 +251,11 @@ public class MainActivity extends Activity {
 			if(httpResponse.getStatusLine().getStatusCode()==200)
 			{
 //				Toast.makeText(MainActivity.this, "刷票成功!", Toast.LENGTH_SHORT).show();
-				OutMsg("刷人气成功!");
+				OutMsg("刷人气成功!",2);
 			}
 			else {
 //				Toast.makeText(MainActivity.this, "刷票失败!", Toast.LENGTH_SHORT).show();
-				OutMsg("刷人气失败!");
+				OutMsg("刷人气失败!",2);
 			}
 			
 		}
@@ -254,7 +263,7 @@ public class MainActivity extends Activity {
 		{
 			// TODO: handle exception
 			e.printStackTrace();
-			OutMsg("刷人气失败!"+e.getCause());
+			OutMsg("刷人气失败!"+e.getCause(),2);
 //			Toast.makeText(MainActivity.this, "刷票失败!", Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -287,16 +296,16 @@ public class MainActivity extends Activity {
 					br.close();
 					streamReader.close();
 					stream.close();
-					OutMsg("刷人气成功!");
+					OutMsg("刷人气成功!",2);
 				}
 				catch (Exception e)
 				{
 					// TODO: handle exception
-					OutMsg("刷人气失败!"+e.getMessage());
+					OutMsg("刷人气失败!"+e.getCause(),2);
 				}
 			}
 			else {
-				OutMsg("无法访问网站!");
+				OutMsg("无法访问网站!",2);
 			}
 			
 		}
@@ -304,8 +313,8 @@ public class MainActivity extends Activity {
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-//			OutMsg("Get请求异常"+e.getMessage());
-			Toast.makeText(MainActivity.this, "Get请求异常"+e.getMessage(),Toast.LENGTH_SHORT).show();
+			OutMsg("Get请求异常"+e.getCause(),2);
+//			Toast.makeText(MainActivity.this, "Get请求异常"+e.getMessage(),Toast.LENGTH_SHORT).show();
 		}
     	finally
     	{
@@ -328,6 +337,10 @@ public class MainActivity extends Activity {
     			Element elementForm=doc.getElementById("form1");
     			Element elementTableElements=elementForm.parents().select("table").first();
     			String srcStr=elementTableElements.text();
+//                srcStr=srcStr.replaceAll(" ",";");
+//                srcStr=srcStr.replace(" ","|");
+                srcStr=srcStr.replaceAll("\\s*","");
+                SetRankTableFromStr(srcStr);
     			Elements elements=doc.select(":containsOwn(北大方正)");
     			String keystr=elements.first().select("font").first().text();
     			keystr=keystr.replace("人气：",":");
@@ -357,9 +370,7 @@ public class MainActivity extends Activity {
     					break;
     				}
     			}
-//    			final String formstr=elTable.text();
     			final String formstr=srcStr;
-    			OutMsg(formstr);
     			final int voteCount=GetIntFromStr(voteCountStr);
     			final int hotCount=GetIntFromStr(hotCountStr);
     			StoreData(voteCount,hotCount,rank,formstr);
@@ -389,9 +400,56 @@ public class MainActivity extends Activity {
 		catch (Exception e)
 		{
 			// TODO: handle exception
-			OutMsg(e.getMessage()+e.getCause());
+			OutMsg(e.getMessage()+e.getCause(),2);
 		}
 	}
+    //根据得到的字符串设置排行榜
+    private void SetRankTableFromStr(String srcStr) {
+        String[] srcStrArray=srcStr.split("：");
+        int j=0;
+        List<TextView> tvListName=new ArrayList<TextView>();
+        tvListName.add((TextView) findViewById(R.id.tvRankName1));
+        tvListName.add((TextView) findViewById(R.id.tvRankName2));
+        tvListName.add((TextView) findViewById(R.id.tvRankName3));
+        tvListName.add((TextView) findViewById(R.id.tvRankName4));
+        tvListName.add((TextView) findViewById(R.id.tvRankName5));
+        List<TextView> tvListVoteCount=new ArrayList<TextView>();
+        tvListVoteCount.add((TextView) findViewById(R.id.tvRankVote1));
+        tvListVoteCount.add((TextView) findViewById(R.id.tvRankVote2));
+        tvListVoteCount.add((TextView) findViewById(R.id.tvRankVote3));
+        tvListVoteCount.add((TextView) findViewById(R.id.tvRankVote4));
+        tvListVoteCount.add((TextView) findViewById(R.id.tvRankVote5));
+        List<TextView> tvListHotCount=new ArrayList<TextView>();
+        tvListHotCount.add((TextView) findViewById(R.id.tvRankHot1));
+        tvListHotCount.add((TextView) findViewById(R.id.tvRankHot2));
+        tvListHotCount.add((TextView) findViewById(R.id.tvRankHot3));
+        tvListHotCount.add((TextView) findViewById(R.id.tvRankHot4));
+        tvListHotCount.add((TextView) findViewById(R.id.tvRankHot5));
+        for(int i=0;i<srcStrArray.length;i+=2)
+        {
+            final String name=GetStrNotNum(srcStrArray[i]).replace("票数","");
+            final int votecount=GetIntFromStr(srcStrArray[i+1]);
+            final int hotcount=GetIntFromStr(srcStrArray[i+2]);
+            final TextView tvName=tvListName.get(j);
+            final TextView tvVoteCount=tvListVoteCount.get(j);
+            final TextView tvHotCount=tvListHotCount.get(j);
+            tvName.post(new Runnable() {
+                @Override
+                public void run() {
+                    tvName.setText(name);
+                    tvVoteCount.setText(""+votecount);
+                    tvHotCount.setText(""+hotcount);
+
+                }
+            });
+            j++;
+            if(j>4)
+            {
+                break;
+            }
+        }
+    }
+
     //获取投票页面htmlstr
     private String GetVoteShowHtml()
 	{
@@ -477,13 +535,13 @@ public class MainActivity extends Activity {
 		}
 	}
     //打印消息
-    private void OutMsg(String str)
+    private void OutMsg(String str,int what)
     {
     	Bundle data=new Bundle();
     	data.putString("msg", str);
     	Message msg=new Message();
     	msg.setData(data);
-    	msg.what=0x01;    	
+        msg.what=what;
     	uiHandler.sendMessage(msg);
     }
     //把投票信息存到本地
@@ -516,6 +574,7 @@ public class MainActivity extends Activity {
 				etMsg.append(rankstr);
 			}
 		});
+        SetRankTableFromStr(rankstr);
 	}
     //获取正确的整数
     private int GetIntFromStr(String str)
@@ -539,5 +598,17 @@ public class MainActivity extends Activity {
 			// TODO: handle exception
 			return -1;
 		}	
+    }
+    //返回非数字的子字符串
+    private String GetStrNotNum(String str)
+    {
+        int i=0;
+        char[] tem=str.toCharArray();
+        while(Character.isDigit(tem[i]))
+        {
+            i++;
+        }
+        String fiStr=str.substring(i,str.length());
+        return fiStr;
     }
 }

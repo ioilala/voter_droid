@@ -1244,6 +1244,7 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f080028;
         public static final int disabled_alpha_material_dark=0x7f080029;
         public static final int disabled_alpha_material_light=0x7f08002a;
+        public static final int rowHeight=0x7f08002b;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1299,7 +1300,16 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int border=0x7f020033;
         public static final int ic_launcher=0x7f020034;
-        public static final int setbar_bg=0x7f020035;
+        public static final int rank1=0x7f020035;
+        public static final int rank10=0x7f020036;
+        public static final int rank2=0x7f020037;
+        public static final int rank3=0x7f020038;
+        public static final int rank4=0x7f020039;
+        public static final int rank5=0x7f02003a;
+        public static final int rank6=0x7f02003b;
+        public static final int rank7=0x7f02003c;
+        public static final int rank8=0x7f02003d;
+        public static final int rank9=0x7f02003e;
     }
     public static final class id {
         public static final int action_bar=0x7f070031;
@@ -1318,9 +1328,9 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f070021;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
-        public static final int btnAddHot=0x7f07004a;
-        public static final int btnGetVoteShow=0x7f070049;
-        public static final int btnVote=0x7f07004b;
+        public static final int btnAddHot=0x7f07005f;
+        public static final int btnGetVoteShow=0x7f07005e;
+        public static final int btnVote=0x7f070060;
         public static final int checkbox=0x7f070029;
         public static final int collapseActionView=0x7f070011;
         public static final int decor_content_parent=0x7f07002f;
@@ -1330,7 +1340,7 @@ containing a value of this type.
         public static final int dropdown=0x7f070013;
         public static final int edit_query=0x7f070033;
         public static final int end=0x7f07000c;
-        public static final int etMsg=0x7f070048;
+        public static final int etMsg=0x7f07005d;
         public static final int expand_activities_button=0x7f070022;
         public static final int expanded_menu=0x7f070028;
         public static final int home=0x7f070019;
@@ -1338,6 +1348,11 @@ containing a value of this type.
         public static final int icon=0x7f070026;
         public static final int ifRoom=0x7f07000e;
         public static final int image=0x7f070023;
+        public static final int imageView1=0x7f070049;
+        public static final int imageView2=0x7f07004d;
+        public static final int imageView4=0x7f070051;
+        public static final int imageView5=0x7f070055;
+        public static final int imageView6=0x7f070059;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070025;
         public static final int middle=0x7f07000b;
@@ -1367,12 +1382,28 @@ containing a value of this type.
         public static final int tabMode=0x7f070002;
         public static final int tableLayout1=0x7f070040;
         public static final int tableRow1=0x7f070041;
+        public static final int tblMainRank=0x7f070048;
         public static final int textView1=0x7f070042;
         public static final int textView5=0x7f070046;
         public static final int title=0x7f070027;
         public static final int tvHot=0x7f070044;
         public static final int tvHotCount=0x7f070045;
         public static final int tvRank=0x7f070047;
+        public static final int tvRankHot1=0x7f07004c;
+        public static final int tvRankHot2=0x7f070050;
+        public static final int tvRankHot3=0x7f070054;
+        public static final int tvRankHot4=0x7f070058;
+        public static final int tvRankHot5=0x7f07005c;
+        public static final int tvRankName1=0x7f07004a;
+        public static final int tvRankName2=0x7f07004e;
+        public static final int tvRankName3=0x7f070052;
+        public static final int tvRankName4=0x7f070056;
+        public static final int tvRankName5=0x7f07005a;
+        public static final int tvRankVote1=0x7f07004b;
+        public static final int tvRankVote2=0x7f07004f;
+        public static final int tvRankVote3=0x7f070053;
+        public static final int tvRankVote4=0x7f070057;
+        public static final int tvRankVote5=0x7f07005b;
         public static final int tvVoteCount=0x7f070043;
         public static final int up=0x7f07001d;
         public static final int useLogo=0x7f070004;

@@ -20,16 +20,40 @@
         revision="20.0.0"
         sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3"/>
     <item
-        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-edd718049c75f99452a790ade4bba1d7ac3f0284.jar"
-        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\debug\classes-6c9776b26705ce7029ccabcaaefee3c8a4c2d08c.jar"
+        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f"/>
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3"/>
     <item
         dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\build\intermediates\pre-dexed\debug\jsoup-1.8.1-8badf00db9026ea4cd2479ec32f1fc3a9276331a.jar"
         jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\libs\jsoup-1.8.1.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="3d57e95c0f150b885ccdbda7a12bef353fd31d02"/>
+    <item
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\debug\classes-9fd0694794a6244a7f32871ea490bf99994eb0a9.jar"
+        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54"/>
+    <item
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\debug\jsoup-1.8.1-6f0d1b9dbfecccaaaefdd5c7eccefdc82ac6f26f.jar"
+        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\libs\jsoup-1.8.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3d57e95c0f150b885ccdbda7a12bef353fd31d02"/>
+    <item
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-edd718049c75f99452a790ade4bba1d7ac3f0284.jar"
+        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\mvoter\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f"/>
+    <item
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-da5b3c50f84bec17ac26ad209088056b692ca9de.jar"
+        jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f"/>
 
 </pre-dex-items>

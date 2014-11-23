@@ -11,13 +11,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="15dp" >
+        android:layout_marginTop="15dp">
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textView1"
@@ -38,7 +39,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="人气："
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp" />
 
             <TextView
                 android:id="@+id/tvHotCount"
@@ -52,7 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="排名："
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp" />
 
             <TextView
                 android:id="@+id/tvRank"
@@ -64,21 +67,305 @@
         </TableRow>
     </TableLayout>
 
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/tblMainRank">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rank1"
+                android:layout_column="0"
+                android:visibility="invisible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="成果名称"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="票数"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="人气"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical|center_horizontal"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1"
+                android:background="@drawable/rank1"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxxxxxx"
+                android:id="@+id/tvRankName1"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankVote1"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankHot1"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:background="@drawable/rank2"
+                android:layout_column="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxxxxxx"
+                android:id="@+id/tvRankName2"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankVote2"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankHot2"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:background="@drawable/rank3"
+                android:layout_column="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxxxxxx"
+                android:id="@+id/tvRankName3"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankVote3"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankHot3"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:background="@drawable/rank4"
+                android:layout_column="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxxxxxx"
+                android:id="@+id/tvRankName4"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankVote4"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankHot4"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView6"
+                android:background="@drawable/rank5"
+                android:layout_column="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxxxxxx"
+                android:id="@+id/tvRankName5"
+                android:layout_column="1"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankVote5"
+                android:layout_column="2"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxx"
+                android:id="@+id/tvRankHot5"
+                android:layout_column="3"
+                android:ellipsize="end"
+                android:inputType="none"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
     <EditText
-        android:id="@+id/etMsg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tableLayout1"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:gravity="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
         android:inputType="textMultiLine"
-        android:padding="30px" />
+        android:ems="10"
+        android:id="@+id/etMsg"
+        android:background="@drawable/border"
+        android:layout_alignLeft="@+id/tblMainRank"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/btnGetVoteShow"
+        android:layout_alignRight="@+id/tblMainRank" />
 
     <Button
         android:id="@+id/btnGetVoteShow"
@@ -93,15 +380,14 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="投票"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/etMsg" />
+        android:layout_alignParentBottom="true" />
 
     <Button
         android:id="@+id/btnAddHot"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="刷人气"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/etMsg" />
+        android:layout_alignTop="@+id/btnVote"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>
