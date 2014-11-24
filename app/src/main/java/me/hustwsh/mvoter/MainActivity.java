@@ -1,20 +1,20 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.4
+ *Version:0.1.3.5
  *Date:2014-11-20
  *Note:
- *实现刷人气；
- *实现获取排名信息;
- *实现刷票;
- *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
- *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
+ * 实现刷人气；
+ * 实现获取排名信息;
+ * 实现刷票;
+ * 将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
+ * 排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
  * 实现排行榜功能(前五名，保存本地数据)
  * 删除开始的三个数据
  *Todo:
- *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
- *投票历史曲线功能
- *定时刷票
+ * 投票历史曲线功能
+ * 定时刷票
+ * 后台service
  */
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -100,10 +100,14 @@ public class MainActivity extends Activity {
         
         RestoreData();
         
-        HttpParams httpParams=new BasicHttpParams();
-		HttpConnectionParams.setConnectionTimeout(httpParams, TIME_OUT);
-		HttpConnectionParams.setSoTimeout(httpParams, TIME_OUT);
-		httpClient=new DefaultHttpClient(httpParams);
+//        HttpParams httpParams=new BasicHttpParams();
+//		HttpConnectionParams.setConnectionTimeout(httpParams, TIME_OUT);
+//		HttpConnectionParams.setSoTimeout(httpParams, TIME_OUT);
+//
+//		httpClient=new DefaultHttpClient(httpParams);
+        httpClient=new DefaultHttpClient();
+        HttpConnectionParams.setConnectionTimeout(httpClient.getParams(),TIME_OUT);
+        HttpConnectionParams.setSoTimeout(httpClient.getParams(),TIME_OUT);
         //界面更新
         uiHandler=new Handler()//Todo
         {
@@ -128,7 +132,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this, "正在投票，请稍后...",Toast.LENGTH_SHORT).show();
+				Toast.makeText(MainActivity.this, "正在投票，请稍候...",Toast.LENGTH_SHORT).show();
 //				btnVote.setEnabled(false);				
 				new Thread()
 				{
@@ -149,7 +153,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this, "正在刷人气，请稍后...",Toast.LENGTH_SHORT).show();
+				Toast.makeText(MainActivity.this, "正在刷人气，请稍候...",Toast.LENGTH_SHORT).show();
 				new Thread()
 				{
 					@Override
@@ -168,13 +172,25 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v)
 			{
+                OutMsg("正在刷新，请稍候...",2);
 				// TODO Auto-generated method stub
 				new Thread()
 				{
 					@Override
 					public void run()
 					{
-						GetVoteShow();
+                        switch (GetVoteShow())
+                        {
+                            case 0:
+                                OutMsg("刷新成功!",2);
+                                break;
+                            case 1:
+                                OutMsg("刷新失败,获取网页信息失败!",2);
+                                break;
+                            case 2:
+                                OutMsg("刷新失败,网络异常!",2);
+                                break;
+                        }
 					}
 				}.start();
 			}
@@ -214,7 +230,7 @@ public class MainActivity extends Activity {
 			}
 			else {
 //				Toast.makeText(MainActivity.this, "刷票失败", Toast.LENGTH_SHORT).show();
-				OutMsg("刷票失败!",2);
+				OutMsg("投票失败,访问网站失败!",2);
 			}
 			
 		}
@@ -222,7 +238,7 @@ public class MainActivity extends Activity {
 		{
 			// TODO: handle exception
 			e.printStackTrace();
-			OutMsg("刷票失败!"+e.getCause(),2);
+			OutMsg("投票失败!"+e.getCause(),2);
 //			Toast.makeText(MainActivity.this, "刷票失败!", Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -316,8 +332,9 @@ public class MainActivity extends Activity {
     	}   	
 	}
     //获取投票信息
-    private void GetVoteShow()
+    private int GetVoteShow()
 	{
+        int result=-1;
     	try
 		{
     		String htmlStr=GetVoteShowHtml();
@@ -333,14 +350,21 @@ public class MainActivity extends Activity {
 //                srcStr=srcStr.replaceAll(" ",";");
 //                srcStr=srcStr.replace(" ","|");
                 srcStr=srcStr.replaceAll("\\s*","");
-                SetRankTableFromStr(srcStr);
+                result=0;
     		}
+            else
+            {
+//                OutMsg("获取网页信息失败！",2);
+                result=1;
+            }
 		}
 		catch (Exception e)
 		{
 			// TODO: handle exception
 			OutMsg(e.getMessage()+e.getCause(),2);
+            result=2;
 		}
+        return result;
 	}
     //根据得到的字符串设置排行榜
     private void SetRankTableFromStr(String srcStr) {
