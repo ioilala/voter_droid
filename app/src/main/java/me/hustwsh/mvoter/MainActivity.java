@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.3
+ *Version:0.1.3.4
  *Date:2014-11-20
  *Note:
  *实现刷人气；
@@ -10,6 +10,7 @@ package me.hustwsh.mvoter;
  *将最近一次获取的投票排行榜信息存到本地，下次启动时读取出来
  *排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
  * 实现排行榜功能(前五名，保存本地数据)
+ * 删除开始的三个数据
  *Todo:
  *OutMsg改为更直观的投票排行榜，投票反馈信息改为Toast提示
  *投票历史曲线功能
@@ -81,10 +82,6 @@ public class MainActivity extends Activity {
 	Button btnVote=null;
     Button btnAddHot=null;
     Button btnGetVoteShow=null;
-    TextView tvVoteCount=null; 
-    TextView tvHotCount=null;
-    TextView tvRank=null;
-    EditText etMsg=null;
     
     static Handler uiHandler=null;
     @Override
@@ -100,10 +97,6 @@ public class MainActivity extends Activity {
         btnVote=(Button)findViewById(R.id.btnVote);
         btnAddHot=(Button)findViewById(R.id.btnAddHot);
         btnGetVoteShow=(Button)findViewById(R.id.btnGetVoteShow);
-        tvVoteCount=(TextView)findViewById(R.id.tvVoteCount);
-        tvHotCount=(TextView)findViewById(R.id.tvHotCount);
-        tvRank=(TextView)findViewById(R.id.tvRank);
-        etMsg=(EditText)findViewById(R.id.etMsg);
         
         RestoreData();
         
@@ -120,7 +113,7 @@ public class MainActivity extends Activity {
         		switch(msg.what)
         		{
         			case 1:
-        				etMsg.append("\n"+msg.getData().getString("msg"));
+//        				etMsg.append("\n"+msg.getData().getString("msg"));
         				break;
                     case 2:
                         Toast.makeText(MainActivity.this,msg.getData().getString("msg"),Toast.LENGTH_SHORT).show();
@@ -341,60 +334,6 @@ public class MainActivity extends Activity {
 //                srcStr=srcStr.replace(" ","|");
                 srcStr=srcStr.replaceAll("\\s*","");
                 SetRankTableFromStr(srcStr);
-    			Elements elements=doc.select(":containsOwn(北大方正)");
-    			String keystr=elements.first().select("font").first().text();
-    			keystr=keystr.replace("人气：",":");
-    			String[] strings=keystr.split(":");
-    			final String voteCountStr=strings[0].substring(0, strings[0].length()-1);
-//    			char[] chars=strings[0].toCharArray();
-    			final String hotCountStr=strings[1].trim();
-    			Element elTbody=doc.select(".MainRight").last().parent().parent();//获取到了排名榜的tbody
-    			Element elTable=elTbody.select("table>tbody").last();//得到了包含排名的具体table
-    			Elements elLinks=elTable.select("a");
-    			int rank=0;
-    			for (int i = 0; i < elLinks.size(); i++)
-    			{
-    				if(elLinks.get(i).text().contains("北大方正"))
-    				{
-    					rank=i+1;
-    					final String rankString=String.valueOf(rank);
-    					tvRank.post(new Runnable()
-    					{
-    						@Override
-    						public void run()
-    						{
-    							// TODO Auto-generated method stub
-    							tvRank.setText(rankString);
-    						}
-    					});
-    					break;
-    				}
-    			}
-    			final String formstr=srcStr;
-    			final int voteCount=GetIntFromStr(voteCountStr);
-    			final int hotCount=GetIntFromStr(hotCountStr);
-    			StoreData(voteCount,hotCount,rank,formstr);
-    			
-    			tvVoteCount.post(new Runnable()
-    			{
-    				
-    				@Override
-    				public void run()
-    				{
-    					// TODO Auto-generated method stub
-    					tvVoteCount.setText(String.valueOf(voteCount));
-    				}
-    			});
-    			tvHotCount.post(new Runnable()
-    			{
-    				
-    				@Override
-    				public void run()
-    				{
-    					// TODO Auto-generated method stub
-    					tvHotCount.setText(String.valueOf(hotCount));
-    				}
-    			});
     		}
 		}
 		catch (Exception e)
@@ -561,19 +500,6 @@ public class MainActivity extends Activity {
 		final int rank=preferences.getInt(PREF_RANK, 0);
 		final String rankstr=preferences.getString(PREF_RANK_STR, "");
 		RelativeLayout rl=(RelativeLayout)findViewById(R.id.reltiveLayoutMain);
-		rl.post(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				// TODO Auto-generated method stub
-				tvVoteCount.setText(String.valueOf(votecount));
-				tvHotCount.setText(String.valueOf(hotcount));
-				tvRank.setText(String.valueOf(rank));
-				etMsg.append(rankstr);
-			}
-		});
         SetRankTableFromStr(rankstr);
 	}
     //获取正确的整数
