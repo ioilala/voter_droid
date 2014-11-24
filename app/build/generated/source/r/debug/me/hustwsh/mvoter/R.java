@@ -1299,17 +1299,20 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int border=0x7f020033;
-        public static final int ic_launcher=0x7f020034;
-        public static final int rank1=0x7f020035;
-        public static final int rank10=0x7f020036;
-        public static final int rank2=0x7f020037;
-        public static final int rank3=0x7f020038;
-        public static final int rank4=0x7f020039;
-        public static final int rank5=0x7f02003a;
-        public static final int rank6=0x7f02003b;
-        public static final int rank7=0x7f02003c;
-        public static final int rank8=0x7f02003d;
-        public static final int rank9=0x7f02003e;
+        public static final int button=0x7f020034;
+        public static final int button_bg_down=0x7f020035;
+        public static final int button_bg_up=0x7f020036;
+        public static final int ic_launcher=0x7f020037;
+        public static final int rank1=0x7f020038;
+        public static final int rank10=0x7f020039;
+        public static final int rank2=0x7f02003a;
+        public static final int rank3=0x7f02003b;
+        public static final int rank4=0x7f02003c;
+        public static final int rank5=0x7f02003d;
+        public static final int rank6=0x7f02003e;
+        public static final int rank7=0x7f02003f;
+        public static final int rank8=0x7f020040;
+        public static final int rank9=0x7f020041;
     }
     public static final class id {
         public static final int action_bar=0x7f070031;

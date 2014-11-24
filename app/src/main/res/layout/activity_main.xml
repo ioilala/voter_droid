@@ -301,34 +301,37 @@
 
         <Button
             android:id="@+id/btnGetVoteShow"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:textColor="#FFF"
             android:text="刷     新"
+            android:background="@drawable/button"
             android:layout_alignTop="@+id/btnAddHot"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp" />
 
         <Button
             android:id="@+id/btnVote"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:textColor="#FFF"
             android:text="投     票"
+            android:background="@drawable/button"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:shadowColor="#000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_marginTop="5dp" />
 
         <Button
             android:id="@+id/btnAddHot"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:textColor="#FFF"
             android:text="刷人气"
+            android:background="@drawable/button"
             android:layout_alignTop="@+id/btnVote"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_marginTop="5dp" />
     </TableLayout>
 

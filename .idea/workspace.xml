@@ -35,7 +35,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e06ddc2-6ba2-438c-adf5-c524e7e53d99" name="Default" comment="v0.1.3.1 add border.xml">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/hustwsh/mvoter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/hustwsh/mvoter/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mvoter.iws" />
@@ -62,16 +68,17 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12676056" vertical-offset="0" max-vertical-offset="2430">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.8945055" vertical-offset="3175" max-vertical-offset="3852">
+              <caret line="669" column="24" selection-start-line="669" selection-start-column="24" selection-end-line="669" selection-end-column="24" />
               <folding>
-                <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#3470#3524#0" expanded="false" />
+                <element signature="e#3752#3806#0" expanded="false" />
+                <element signature="e#4488#4951#0" expanded="true" />
+                <element signature="e#4940#4941#0" expanded="true" />
+                <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#10297#10354#0" expanded="false" />
-                <element signature="e#10577#10629#0" expanded="false" />
+                <element signature="e#12190#12215#0" expanded="false" />
                 <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -80,7 +87,40 @@
                 <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContextWrapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/sources/android-21/android/content/ContextWrapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="9882">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpParams.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/platforms/android-21/android.jar!/org/apache/http/params/HttpParams.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="720">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,18 +128,8 @@
       <file leaf-file-name="HttpConnectionParams.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/platforms/android-21/android.jar!/org/apache/http/params/HttpConnectionParams.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="666">
+            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="684">
               <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -107,68 +137,53 @@
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.142858" vertical-offset="5458" max-vertical-offset="6174">
+              <caret line="319" column="32" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.034483" vertical-offset="0" max-vertical-offset="6120">
-              <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+        </entry>
+      </file>
+      <file leaf-file-name="border.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <file leaf-file-name="button_bg_down.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".project" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.project">
+      <file leaf-file-name="button.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="702">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="button_bg_up.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="234">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="39834" max-vertical-offset="41724">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <marker date="1416831861798" expanded="true" signature="156122:156185" placeholder="..." />
-                <marker date="1416831861798" expanded="true" signature="156122:156170" placeholder="..." />
-                <marker date="1416831861798" expanded="true" signature="156122:156157" placeholder="..." />
-                <marker date="1416831861798" expanded="true" signature="156122:156139" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1301,12 +1316,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/setbar_bg.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/values.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/value.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
       </list>
@@ -1558,6 +1576,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-mdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mvoter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voter_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1568,8 +1616,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1590,6 +1636,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1599,7 +1647,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="mobi.hsz.idea.gitignore.settings.GitignoreSettingsConfigurable" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1839,15 +1887,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30876216" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925257" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" x="1041" y="201" width="513" height="482" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" x="1041" y="201" width="513" height="482" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30876216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30876216" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30876216" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16388175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16301547" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1625964" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1857,7 +1905,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1882,22 +1930,82 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="6120">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="162">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="234">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="594">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="39870" max-vertical-offset="41940">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9882">
           <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -1906,6 +2014,9 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1927,14 +2038,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2016">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -1966,13 +2077,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9882">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -1981,6 +2093,9 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2002,14 +2117,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="2016">
           <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
@@ -2025,13 +2140,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9864">
           <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2040,6 +2156,9 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2061,14 +2180,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="2016">
           <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
@@ -2084,13 +2203,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2099,19 +2219,22 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="428" max-vertical-offset="1980">
           <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -2127,13 +2250,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9576">
           <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2142,19 +2266,22 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2090">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/import-summary.txt">
@@ -2171,14 +2298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="234">
@@ -2189,14 +2308,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="39834" max-vertical-offset="42156">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1416831861798" expanded="true" signature="156122:156185" placeholder="..." />
-            <marker date="1416831861798" expanded="true" signature="156122:156170" placeholder="..." />
-            <marker date="1416831861798" expanded="true" signature="156122:156157" placeholder="..." />
-            <marker date="1416831861798" expanded="true" signature="156122:156139" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="39870" max-vertical-offset="44010">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2212,14 +2326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4574468" vertical-offset="48" max-vertical-offset="612">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -2272,29 +2378,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    <entry file="jar://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/platforms/android-21/android.jar!/org/apache/http/client/HttpClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24545455" vertical-offset="0" max-vertical-offset="558">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.034483" vertical-offset="0" max-vertical-offset="5832">
-          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+    </entry>
+    <entry file="jar://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/platforms/android-21/android.jar!/org/apache/http/params/HttpParams.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/sources/android-21/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="9882">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/border.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.142858" vertical-offset="5458" max-vertical-offset="6174">
+          <caret line="319" column="32" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12676056" vertical-offset="0" max-vertical-offset="2430">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.8945055" vertical-offset="3175" max-vertical-offset="3852">
+          <caret line="669" column="24" selection-start-line="669" selection-start-column="24" selection-end-line="669" selection-end-column="24" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#3470#3524#0" expanded="false" />
+            <element signature="e#3752#3806#0" expanded="false" />
+            <element signature="e#4488#4951#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
+            <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10297#10354#0" expanded="false" />
-            <element signature="e#10577#10629#0" expanded="false" />
+            <element signature="e#12190#12215#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2303,6 +2473,9 @@
             <element signature="method#RestoreData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetIntFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetStrNotNum#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckForNetWork#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#GetNetworkType#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

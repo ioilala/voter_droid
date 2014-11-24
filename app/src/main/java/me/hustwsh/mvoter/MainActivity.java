@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.5
+ *Version:0.1.3.6
  *Date:2014-11-20
  *Note:
  * 实现刷人气；
@@ -11,6 +11,10 @@ package me.hustwsh.mvoter;
  * 排名信息室全站的票数排名，要改为只获取对应页面的排名信息;
  * 实现排行榜功能(前五名，保存本地数据)
  * 删除开始的三个数据
+ * 修复上一版刷新和保存数据的bug
+ * 加入网络判断
+ * 改善按钮外观
+ * 加入按钮震动
  *Todo:
  * 投票历史曲线功能
  * 定时刷票
@@ -28,10 +32,16 @@ import java.util.List;
 import java.util.ListIterator;
 
 import android.app.Activity;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -50,6 +60,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.HTTP;
@@ -90,24 +101,27 @@ public class MainActivity extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         preferences=getSharedPreferences("mvoter", MODE_PRIVATE);
         editorPref=preferences.edit();
-        
+
         btnVote=(Button)findViewById(R.id.btnVote);
         btnAddHot=(Button)findViewById(R.id.btnAddHot);
         btnGetVoteShow=(Button)findViewById(R.id.btnGetVoteShow);
-        
+        //恢复本地保存的排行榜数据
         RestoreData();
-        
 //        HttpParams httpParams=new BasicHttpParams();
 //		HttpConnectionParams.setConnectionTimeout(httpParams, TIME_OUT);
 //		HttpConnectionParams.setSoTimeout(httpParams, TIME_OUT);
 //
 //		httpClient=new DefaultHttpClient(httpParams);
+//        httpClient=new DefaultHttpClient();
+//        HttpConnectionParams.setConnectionTimeout(httpClient.getParams(),TIME_OUT);
+//        HttpConnectionParams.setSoTimeout(httpClient.getParams(),TIME_OUT);
+        //初始化httpclient，设置超时
         httpClient=new DefaultHttpClient();
-        HttpConnectionParams.setConnectionTimeout(httpClient.getParams(),TIME_OUT);
-        HttpConnectionParams.setSoTimeout(httpClient.getParams(),TIME_OUT);
+        httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT,TIME_OUT);
+        httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,TIME_OUT);
         //界面更新
         uiHandler=new Handler()//Todo
         {
@@ -120,11 +134,20 @@ public class MainActivity extends Activity {
 //        				etMsg.append("\n"+msg.getData().getString("msg"));
         				break;
                     case 2:
-                        Toast.makeText(MainActivity.this,msg.getData().getString("msg"),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),msg.getData().getString("msg"),Toast.LENGTH_SHORT).show();
                         break;
         		}
         	}
         };
+        //检查网络
+        if(CheckForNetWork(getApplicationContext()))
+        {
+            OutMsg("网络已连接:"+GetNetworkType(getApplicationContext()),2);
+        }
+        else
+        {
+            OutMsg("当前无网络连接!",2);
+        }
         //投票
         btnVote.setOnClickListener(new OnClickListener()
 		{
@@ -132,6 +155,12 @@ public class MainActivity extends Activity {
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
+                Vibrate();
+                if(!CheckForNetWork(getApplicationContext()))
+                {
+                    OutMsg("当前网络未连接!",2);
+                    return;
+                }
 				Toast.makeText(MainActivity.this, "正在投票，请稍候...",Toast.LENGTH_SHORT).show();
 //				btnVote.setEnabled(false);				
 				new Thread()
@@ -142,7 +171,6 @@ public class MainActivity extends Activity {
 						VoteOnce();
 					}
 				}.start();
-//				VoteOnce();
 			}
 		});
         //刷人气
@@ -153,6 +181,12 @@ public class MainActivity extends Activity {
 			public void onClick(View v)
 			{
 				// TODO Auto-generated method stub
+                Vibrate();
+                if(!CheckForNetWork(getApplicationContext()))
+                {
+                    OutMsg("当前网络未连接!",2);
+                    return;
+                }
 				Toast.makeText(MainActivity.this, "正在刷人气，请稍候...",Toast.LENGTH_SHORT).show();
 				new Thread()
 				{
@@ -172,6 +206,12 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v)
 			{
+                Vibrate();
+                if(!CheckForNetWork(getApplicationContext()))
+                {
+                    OutMsg("当前网络未连接!",2);
+                    return;
+                }
                 OutMsg("正在刷新，请稍候...",2);
 				// TODO Auto-generated method stub
 				new Thread()
@@ -179,16 +219,17 @@ public class MainActivity extends Activity {
 					@Override
 					public void run()
 					{
-                        switch (GetVoteShow())
+                        int index=GetVoteShow();
+                        switch (index)
                         {
                             case 0:
                                 OutMsg("刷新成功!",2);
                                 break;
                             case 1:
-                                OutMsg("刷新失败,获取网页信息失败!",2);
+                                OutMsg("刷新失败,获取网页信息失败!请检查网络连接!",2);
                                 break;
                             case 2:
-                                OutMsg("刷新失败,网络异常!",2);
+                                OutMsg("刷新失败,字符串异常!",2);
                                 break;
                         }
 					}
@@ -199,7 +240,6 @@ public class MainActivity extends Activity {
     //投票
     private void VoteOnce()
     {
-    		
 		try
 		{
 			HttpPost post=new HttpPost(URL_VOTE);
@@ -215,7 +255,7 @@ public class MainActivity extends Activity {
 			params.add(new BasicNameValuePair("VoTeid", "320"));
 			params.add(new BasicNameValuePair("Submit", "提交投票"));
 			post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-			HttpResponse httpResponse=httpClient.execute(post);			
+			HttpResponse httpResponse=httpClient.execute(post);
 			if(httpResponse.getStatusLine().getStatusCode()==200)
 			{
 				String msg=EntityUtils.toString(httpResponse.getEntity());
@@ -238,7 +278,8 @@ public class MainActivity extends Activity {
 		{
 			// TODO: handle exception
 			e.printStackTrace();
-			OutMsg("投票失败!"+e.getCause(),2);
+			OutMsg("投票失败!"+e.getMessage()+e.getCause(),2);
+
 //			Toast.makeText(MainActivity.this, "刷票失败!", Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -331,7 +372,7 @@ public class MainActivity extends Activity {
     			conn.disconnect();
     	}   	
 	}
-    //获取投票信息
+    //刷新，获取投票信息
     private int GetVoteShow()
 	{
         int result=-1;
@@ -339,17 +380,14 @@ public class MainActivity extends Activity {
 		{
     		String htmlStr=GetVoteShowHtml();
 //    		OutMsg(htmlStr);
-    		if(htmlStr!=null)
+    		if(htmlStr!=null&&htmlStr!="")
     		{
     			Document doc = Jsoup.parse(htmlStr);
-//    			Elements el=doc.getElementsByClass("MainRight");
-//    			OutMsg(el.outerHtml());
     			Element elementForm=doc.getElementById("form1");
     			Element elementTableElements=elementForm.parents().select("table").first();
     			String srcStr=elementTableElements.text();
-//                srcStr=srcStr.replaceAll(" ",";");
-//                srcStr=srcStr.replace(" ","|");
                 srcStr=srcStr.replaceAll("\\s*","");
+                SetRankTableFromStr(srcStr);//解析字符串得到排行榜
                 result=0;
     		}
             else
@@ -361,7 +399,7 @@ public class MainActivity extends Activity {
 		catch (Exception e)
 		{
 			// TODO: handle exception
-			OutMsg(e.getMessage()+e.getCause(),2);
+//			OutMsg(e.getMessage()+e.getCause(),2);
             result=2;
 		}
         return result;
@@ -393,6 +431,10 @@ public class MainActivity extends Activity {
             final String name=GetStrNotNum(srcStrArray[i]).replace("票数","");
             final int votecount=GetIntFromStr(srcStrArray[i+1]);
             final int hotcount=GetIntFromStr(srcStrArray[i+2]);
+            if(name.contains("北大方正"))
+            {
+                StoreData(votecount,hotcount,j+1,srcStr);
+            }
             final TextView tvName=tvListName.get(j);
             final TextView tvVoteCount=tvListVoteCount.get(j);
             final TextView tvHotCount=tvListHotCount.get(j);
@@ -412,7 +454,6 @@ public class MainActivity extends Activity {
             }
         }
     }
-
     //获取投票页面htmlstr
     private String GetVoteShowHtml()
 	{
@@ -446,7 +487,7 @@ public class MainActivity extends Activity {
 //				OutMsg(htmlstr);
 			}
 			else {
-				return null;
+				return "";
 			}
 		}
 		catch (Exception e)
@@ -500,12 +541,12 @@ public class MainActivity extends Activity {
     //打印消息
     private void OutMsg(String str,int what)
     {
-    	Bundle data=new Bundle();
-    	data.putString("msg", str);
-    	Message msg=new Message();
-    	msg.setData(data);
+        Bundle data=new Bundle();
+        data.putString("msg", str);
+        Message msg=new Message();
+        msg.setData(data);
         msg.what=what;
-    	uiHandler.sendMessage(msg);
+        uiHandler.sendMessage(msg);
     }
     //把投票信息存到本地
     private void StoreData(int votecount,int hotcount,int rank,String rankstr)
@@ -560,5 +601,78 @@ public class MainActivity extends Activity {
         }
         String fiStr=str.substring(i,str.length());
         return fiStr;
+    }
+    //检查是否有网络
+    private boolean CheckForNetWork(Context context)
+    {
+        try
+        {
+            if(context!=null)
+            {
+                ConnectivityManager cm=(ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+                if(cm!=null)
+                {
+                    NetworkInfo ni=cm.getActiveNetworkInfo();
+                    if(ni!=null&&ni.isAvailable())
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            return false;
+        }
+        catch(Exception ex)
+        {
+            OutMsg("检查网络异常:"+ex.getMessage(),2);
+            return false;
+        }
+    }
+    //获取当前网络连接类型
+    private String GetNetworkType(Context contxt)
+    {
+        try
+        {
+            if(contxt!=null)
+            {
+                ConnectivityManager cm=(ConnectivityManager)contxt.getSystemService(contxt.CONNECTIVITY_SERVICE);
+                if(cm!=null)
+                {
+                    NetworkInfo ni=cm.getActiveNetworkInfo();
+                    if(ni!=null&&ni.isAvailable())
+                    {
+                        return ni.getTypeName();
+                    }
+                }
+            }
+            return null;
+        }
+        catch(Exception ex)
+        {
+            OutMsg("获取网络类型异常:"+ex.getMessage(),2);
+            return null;
+        }
+    }
+    //设置网络
+    private void CheckNetWorkAndSet()
+    {
+        if(!CheckForNetWork(getApplicationContext()))
+        {
+            OutMsg("当前网络未连接!",2);
+        }
+    }
+    //震动
+    private void Vibrate()
+    {
+        try
+        {
+            Vibrator vb=(Vibrator)getSystemService(Service.VIBRATOR_SERVICE);
+            vb.vibrate(40);
+//            vb.cancel();
+        }
+        catch(Exception ex)
+        {
+
+        }
     }
 }
