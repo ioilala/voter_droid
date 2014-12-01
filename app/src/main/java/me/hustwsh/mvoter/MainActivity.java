@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.3.6
+ *Version:0.1.4
  *Date:2014-11-20
  *Note:
  * 实现刷人气；
@@ -15,6 +15,8 @@ package me.hustwsh.mvoter;
  * 加入网络判断
  * 改善按钮外观
  * 加入按钮震动
+ * 北大方正红色显示
+ * 加入友盟统计
  *Todo:
  * 投票历史曲线功能
  * 定时刷票
@@ -36,6 +38,8 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -69,6 +73,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.social.UMPlatformData;
+import com.umeng.analytics.social.UMPlatformData.GENDER;
+import com.umeng.analytics.social.UMPlatformData.UMedia;
 
 public class MainActivity extends Activity {
 	public static final String URL_VOTE = "http://gqt-xl.org/More&vote.asp";
@@ -89,7 +97,7 @@ public class MainActivity extends Activity {
 	HttpClient httpClient=null;
 	SharedPreferences preferences=null;
 	SharedPreferences.Editor editorPref=null;
-	
+//
 	Button btnVote=null;
     Button btnAddHot=null;
     Button btnGetVoteShow=null;
@@ -100,6 +108,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //youmeng
+        MobclickAgent.updateOnlineConfig(this);
+        MobclickAgent.setDebugMode(true);
+
         setContentView(R.layout.activity_main);
 
         preferences=getSharedPreferences("mvoter", MODE_PRIVATE);
@@ -156,6 +168,7 @@ public class MainActivity extends Activity {
 			{
 				// TODO Auto-generated method stub
                 Vibrate();
+                MobclickAgent.onEvent(MainActivity.this, "vote_once");
                 if(!CheckForNetWork(getApplicationContext()))
                 {
                     OutMsg("当前网络未连接!",2);
@@ -182,6 +195,8 @@ public class MainActivity extends Activity {
 			{
 				// TODO Auto-generated method stub
                 Vibrate();
+                //youmeng
+                MobclickAgent.onEvent(MainActivity.this, "add_hot");
                 if(!CheckForNetWork(getApplicationContext()))
                 {
                     OutMsg("当前网络未连接!",2);
@@ -207,6 +222,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v)
 			{
                 Vibrate();
+                MobclickAgent.onEvent(MainActivity.this, "refresh_votes");
                 if(!CheckForNetWork(getApplicationContext()))
                 {
                     OutMsg("当前网络未连接!",2);
@@ -237,6 +253,21 @@ public class MainActivity extends Activity {
 			}
 		});
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //youmeng
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //youmeng
+        MobclickAgent.onPause(this);
+    }
+
     //投票
     private void VoteOnce()
     {
@@ -431,22 +462,40 @@ public class MainActivity extends Activity {
             final String name=GetStrNotNum(srcStrArray[i]).replace("票数","");
             final int votecount=GetIntFromStr(srcStrArray[i+1]);
             final int hotcount=GetIntFromStr(srcStrArray[i+2]);
-            if(name.contains("北大方正"))
-            {
-                StoreData(votecount,hotcount,j+1,srcStr);
-            }
             final TextView tvName=tvListName.get(j);
             final TextView tvVoteCount=tvListVoteCount.get(j);
             final TextView tvHotCount=tvListHotCount.get(j);
-            tvName.post(new Runnable() {
-                @Override
-                public void run() {
-                    tvName.setText(name);
-                    tvVoteCount.setText(""+votecount);
-                    tvHotCount.setText(""+hotcount);
+            if(name.contains("北大方正"))
+            {
+                StoreData(votecount,hotcount,j+1,srcStr);
+                tvName.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        tvName.setTextColor(Color.RED);
+                        tvVoteCount.setTextColor(Color.RED);
+                        tvHotCount.setTextColor(Color.RED);
+                        tvName.setText(name);
+                        tvVoteCount.setText(""+votecount);
+                        tvHotCount.setText(""+hotcount);
 
-                }
-            });
+                    }
+                });
+            }
+            else
+            {
+                tvName.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        tvName.setTextColor(Color.BLACK);
+                        tvVoteCount.setTextColor(Color.BLACK);
+                        tvHotCount.setTextColor(Color.BLACK);
+                        tvName.setText(name);
+                        tvVoteCount.setText(""+votecount);
+                        tvHotCount.setText(""+hotcount);
+
+                    }
+                });
+            }
             j++;
             if(j>4)
             {

@@ -22,4 +22,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'com.android.support:support-v4:21.0.2'
     compile files('libs/jsoup-1.8.1.jar')
+
+    compile files('libs/umeng-analytics-v5.2.4.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }
