@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.4
+ *Version:0.1.5
  *Date:2014-11-20
  *Note:
  * 实现刷人气；
@@ -17,6 +17,7 @@ package me.hustwsh.mvoter;
  * 加入按钮震动
  * 北大方正红色显示
  * 加入友盟统计
+ * 友盟自定义事件
  *Todo:
  * 投票历史曲线功能
  * 定时刷票
@@ -160,13 +161,22 @@ public class MainActivity extends Activity {
         {
             OutMsg("当前无网络连接!",2);
         }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //youmeng
+        MobclickAgent.onResume(this);
+
         //投票
         btnVote.setOnClickListener(new OnClickListener()
-		{
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // TODO Auto-generated method stub
                 Vibrate();
                 MobclickAgent.onEvent(MainActivity.this, "vote_once");
                 if(!CheckForNetWork(getApplicationContext()))
@@ -174,26 +184,26 @@ public class MainActivity extends Activity {
                     OutMsg("当前网络未连接!",2);
                     return;
                 }
-				Toast.makeText(MainActivity.this, "正在投票，请稍候...",Toast.LENGTH_SHORT).show();
-//				btnVote.setEnabled(false);				
-				new Thread()
-				{
-					@Override
-					public void run()
-					{
-						VoteOnce();
-					}
-				}.start();
-			}
-		});
+                Toast.makeText(MainActivity.this, "正在投票，请稍候...",Toast.LENGTH_SHORT).show();
+//				btnVote.setEnabled(false);
+                new Thread()
+                {
+                    @Override
+                    public void run()
+                    {
+                        VoteOnce();
+                    }
+                }.start();
+            }
+        });
         //刷人气
         btnAddHot.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
-				// TODO Auto-generated method stub
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                // TODO Auto-generated method stub
                 Vibrate();
                 //youmeng
                 MobclickAgent.onEvent(MainActivity.this, "add_hot");
@@ -202,25 +212,25 @@ public class MainActivity extends Activity {
                     OutMsg("当前网络未连接!",2);
                     return;
                 }
-				Toast.makeText(MainActivity.this, "正在刷人气，请稍候...",Toast.LENGTH_SHORT).show();
-				new Thread()
-				{
-					@Override
-					public void run()
-					{
-						//AddHot();
-						AddHotNew();
-					}
-				}.start();
-			}
-		});
+                Toast.makeText(MainActivity.this, "正在刷人气，请稍候...",Toast.LENGTH_SHORT).show();
+                new Thread()
+                {
+                    @Override
+                    public void run()
+                    {
+                        //AddHot();
+                        AddHotNew();
+                    }
+                }.start();
+            }
+        });
         //获取最新投票信息
         btnGetVoteShow.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
+        {
+
+            @Override
+            public void onClick(View v)
+            {
                 Vibrate();
                 MobclickAgent.onEvent(MainActivity.this, "refresh_votes");
                 if(!CheckForNetWork(getApplicationContext()))
@@ -229,12 +239,12 @@ public class MainActivity extends Activity {
                     return;
                 }
                 OutMsg("正在刷新，请稍候...",2);
-				// TODO Auto-generated method stub
-				new Thread()
-				{
-					@Override
-					public void run()
-					{
+                // TODO Auto-generated method stub
+                new Thread()
+                {
+                    @Override
+                    public void run()
+                    {
                         int index=GetVoteShow();
                         switch (index)
                         {
@@ -248,17 +258,10 @@ public class MainActivity extends Activity {
                                 OutMsg("刷新失败,字符串异常!",2);
                                 break;
                         }
-					}
-				}.start();
-			}
-		});
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //youmeng
-        MobclickAgent.onResume(this);
+                    }
+                }.start();
+            }
+        });
     }
 
     @Override

@@ -2,6 +2,12 @@
 <pre-dex-items>
 
     <item
+        dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\release\support-annotations-21.0.2-1c5a76df8f287963e780d44ce8eccedaf3dc7d7a.jar"
+        jar="D:\Program Files\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6"/>
+    <item
         dex="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\pre-dexed\debug\classes-6c9776b26705ce7029ccabcaaefee3c8a4c2d08c.jar"
         jar="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
         jumboMode="false"

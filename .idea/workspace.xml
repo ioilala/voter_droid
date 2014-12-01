@@ -35,21 +35,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e06ddc2-6ba2-438c-adf5-c524e7e53d99" name="Default" comment="v0.1.3.1 add border.xml">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/umeng-analytics-v5.2.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/analytics_5_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/umeng_analytics_v5_2_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jsoup_1_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_8_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-project.txt" afterPath="$PROJECT_DIR$/proguard-project.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mvoter.iws" />
@@ -76,17 +65,16 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.084745765" vertical-offset="1675" max-vertical-offset="3870">
-              <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+            <state vertical-scroll-proportion="1.6111112" vertical-offset="0" max-vertical-offset="3996">
+              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
               <folding>
-                <element signature="e#4162#4216#0" expanded="false" />
-                <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#4173#4227#0" expanded="false" />
                 <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#13109#13134#0" expanded="false" />
+                <element signature="e#13658#13683#0" expanded="false" />
                 <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -100,6 +88,16 @@
                 <element signature="method#CheckNetWorkAndSet#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#Vibrate#0;class#MainActivity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proguard-project.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,20 +126,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+              <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
               <folding>
                 <element signature="e#918#936#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpParams.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/platforms/android-21/android.jar!/org/apache/http/params/HttpParams.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="720">
-              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,6 +193,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\hust_wsh\androidkey.jks" />
+    <option name="KEY_ALIAS" value="wsh_key" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -1338,9 +1331,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_up.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/button_bg_down.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/proguard-project.txt" />
       </list>
     </option>
   </component>
@@ -1348,7 +1342,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
-    <option name="height" value="834" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1555,7 +1549,7 @@
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="355BBI7MAY47" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="5.1Device" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apk" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="161" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="191" />
@@ -1572,6 +1566,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="660" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="ExportApk.ApkPath" value="H:\KuaiPan\PostGraduateCareer\dev\Android\androidstudio\voter_android\apk" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.BuildType" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -1773,7 +1770,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="834" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1789,11 +1786,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32791728" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49095967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30876216" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16388175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1804,7 +1802,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" x="1041" y="201" width="513" height="482" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1833,25 +1830,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="558">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="6120">
-          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="162">
@@ -1894,14 +1872,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9882">
           <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -1975,14 +1952,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9882">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2041,14 +2017,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9864">
           <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2107,14 +2082,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2155,14 +2129,13 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9576">
           <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
@@ -2337,16 +2310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="e#918#936#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.0" vertical-offset="157" max-vertical-offset="612">
@@ -2355,19 +2318,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/adt-bundle-windows-x86_64-20140702/sdk/sources/android-21/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6126126" vertical-offset="36394" max-vertical-offset="90972">
+          <caret line="2206" column="0" selection-start-line="2206" selection-start-column="0" selection-end-line="2206" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+          <folding>
+            <element signature="e#918#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/hustwsh/mvoter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.084745765" vertical-offset="1675" max-vertical-offset="3870">
-          <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+        <state vertical-scroll-proportion="1.6111112" vertical-offset="0" max-vertical-offset="3996">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
           <folding>
-            <element signature="e#4162#4216#0" expanded="false" />
-            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4173#4227#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
             <element signature="method#VoteOnce#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHotNew#0;class#MainActivity#0" expanded="false" />
             <element signature="method#AddHot#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShow#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13109#13134#0" expanded="false" />
+            <element signature="e#13658#13683#0" expanded="false" />
             <element signature="method#SetRankTableFromStr#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#0;class#MainActivity#0" expanded="false" />
             <element signature="method#GetVoteShowHtml#1;class#MainActivity#0" expanded="false" />
