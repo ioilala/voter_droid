@@ -1,7 +1,7 @@
 package me.hustwsh.mvoter;
 /*
  *Author:hust_wsh
- *Version:0.1.5
+ *Version:0.1.6
  *Date:2014-11-20
  *Note:
  * 实现刷人气；
@@ -617,7 +617,10 @@ public class MainActivity extends Activity {
 		final int rank=preferences.getInt(PREF_RANK, 0);
 		final String rankstr=preferences.getString(PREF_RANK_STR, "");
 		RelativeLayout rl=(RelativeLayout)findViewById(R.id.reltiveLayoutMain);
-        SetRankTableFromStr(rankstr);
+        if(rankstr!="")
+        {
+            SetRankTableFromStr(rankstr);
+        }
 	}
     //获取正确的整数
     private int GetIntFromStr(String str)
