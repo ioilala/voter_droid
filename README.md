@@ -20,3 +20,4 @@
  * votes history curves
  * refresh voting periodically
  * run as a service
+ ![](http://ioilala.sinaapp.com/img/5.png)
